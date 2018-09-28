@@ -1,0 +1,72 @@
+==========================================================================
+Project 2
+==========================================================================
+By: Andrew Nolan
+
+--------------------------------------------------------------------------
+Files Included
+--------------------------------------------------------------------------
+phase1 folder:
+	Makefile - the makefile for phase1
+	phase1_module.c - the interceptor for sys_open and sys_close, and the example on syscall1 
+	phase1_test.c -the user land code to test phase 1
+	syslog_phase1 - the syslog after running the phase1 code shows the open and closing of files
+			as well as the hello world interception.
+
+phase2 folder:
+	Makefile - the makefile for phase2
+	phase2_module.c - the code for the kernel interceptor of the cs3013_syscall2 function
+	phase2_test.c - the user land test code to test the interceptor
+	syslog_phase2 - the syslog after running the phase 2 code
+
+--------------------------------------------------------------------------
+Description
+--------------------------------------------------------------------------
+This is my submission for project 2 of CS3013.
+The project contains 2 phases, first an interception
+of the sys_open and sys_close system commands. The
+second phase involves intercepting the cs3013_syscall2
+that was made in the preproject. The call now takes a
+pointer to a struct as a parameter and returns statistics
+about the process.
+
+--------------------------------------------------------------------------
+Phase 1 Notes
+--------------------------------------------------------------------------
+When in the phase 1 folder run the command make.
+Next user the interceptor with the commmand "sudo insmod phase1_module.ko"
+The system opens and closes many files very often so looking at the syslog,
+located at /var/log/syslog will show you the interceptors effects. To see
+the effects of the interception of cs3013_syscall1, it can be read by the 
+command "cat /var/log/syslog | grep EXTERMINATE" or you can perform 
+"cat syslog_phase1 | grep EXTERMINATE" to see an example from my test run.
+I ran multiple tests, so the log file may include multiple occurences of
+EXTERMINATE and loaded. There are no known errors in phase1. It is
+recommended to remove this interceptor when you are done because it
+causes large amounts of syslog clutter.
+
+--------------------------------------------------------------------------
+Phase 2 Notes
+--------------------------------------------------------------------------
+Phase 2 allows you to recieve stats about the process that is 
+running. When in the phase2 folder you can run the commmand "make".
+This will create the files needed to run the program. First 
+insert the phase2_module.ko  with "sudo insmod phase2_module.ko".
+Next you can run your own tests or mine via "./phase2_test". There is
+a known error for my implementation of phase2, that being the 
+child times are often 0, however this could just be my test implementation.
+I think the logic for adding child time is correct, if you as the grader 
+see what could be wrong with it please let me know! 
+
+
+
+
+
+
+
+
+
+
+
+
+

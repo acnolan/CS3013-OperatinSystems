@@ -1,0 +1,121 @@
+-------------------------------------------------------------------------------
+Part 1 Tests
+-------------------------------------------------------------------------------
+
+student@U16: ~/OS/Project1$ ./doit wc foo.txt
+ 1 13 64 foo.txt
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 1.541 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 1
+Number of major page faults: 0
+Number of minor page faults: 79
+Maximum resident set size used: 1904 kilobytes
+student@U16: ~/OS/Project1$ ./doit cat foo.txt
+This is just a text document to run commands on, don't mind me.
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 1.35 milliseconds
+Number of times process was preempted involuntarily: 2
+Number of times process gave up the CPU voluntarily: 1
+Number of major page faults: 0
+Number of minor page faults: 75
+Maximum resident set size used: 1800 kilobytes
+
+
+-------------------------------------------------------------------------------
+Part 2 Tests
+-------------------------------------------------------------------------------
+
+student@U16: ~/OS/Project1$ ./doit
+ENTERING SHELL MODE
+==>cat foo.txt
+Executing Process...
+This is just a text document to run commands on, don't mind me.
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 1.523 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 1
+Number of major page faults: 0
+Number of minor page faults: 75
+Maximum resident set size used: 1748 kilobytes
+==>cd  
+Working directory has been changed to: home
+==>cd OS.      ls
+Executing Process...
+Desktop    Downloads	      examples.desktop	OS	  Public     Videos
+Documents  eclipse-workspace  Music		Pictures  Templates
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 2.007 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 1
+Number of major page faults: 0
+Number of minor page faults: 105
+Maximum resident set size used: 2348 kilobytes
+==>cd OS/Prok ject1
+Working directory has been changed to: OS/Project1
+==>set prompt = -->
+The prompt has been changed from '==>' to '-->'
+-->exit
+
+-------------------------------------------------------------------------------
+Part 3 Tests
+-------------------------------------------------------------------------------
+
+student@U16: ~/OS/Project1$ ./doit
+ENTERING SHELL MODE
+==>sleep 5 &
+[1] 2696 sleep 5 & has started
+==>jobs
+[1] 2696 sleep 5 &
+==>ls
+Executing Process...
+doit  doit.cpp	foo.txt  makefile  readme.txt  testruns.txt  typescript
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 1.628 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 1
+Number of major page faults: 0
+Number of minor page faults: 106
+Maximum resident set size used: 2376 kilobytes
+==>cat foo.txt
+Executing Process...
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 0.007 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 2
+Number of major page faults: 0
+Number of minor page faults: 73
+Maximum resident set size used: 2376 kilobytes
+[1] 2696  Completed
+
+Statistics:
+CPU System Time: 0 milliseconds
+CPU User Time: 0 milliseconds
+Elapsed wall clock time: 5388.56 milliseconds
+Number of times process was preempted involuntarily: 0
+Number of times process gave up the CPU voluntarily: 0
+Number of major page faults: 0
+Number of minor page faults: 0
+Maximum resident set size used: 2376 kilobytes
+==>This is just a text document to run commands on, don't mind me.
+jobs
+No background processes active
+==>exit

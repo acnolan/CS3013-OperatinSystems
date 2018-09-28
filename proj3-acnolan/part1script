@@ -1,0 +1,22 @@
+part1script - Andrew Nolan
+
+Script started on Thu 27 Sep 2018 05:12:50 PM EDT
+andrew@andrew-VirtualBox: ~/OS$ ./addem 
+Please enter the correct number of arguments
+It should be the form './addem #threads #count'
+andrew@andrew-VirtualBox: ~/OS$ ./addem 10 100
+The total for 1 to 100 using 10 threads is 5050.
+andrew@andrew-VirtualBox: ~/OS$ ./addem 1000 100
+The total for 1 to 100 using 1000 threads (reduced to 100 because of too many threads) is 5050.
+andrew@andrew-VirtualBox: ~/OS$ ./addem 10 10
+The total for 1 to 10 using 10 threads is 55.
+andrew@andrew-VirtualBox: ~/OS$ ./addem 0 0
+Please enter a positive number of threads
+andrew@andrew-VirtualBox: ~/OS$ ./addem 1 0
+Please enter a positive number to count to
+andrew@andrew-VirtualBox: ~/OS$ ./addem 1 1
+The total for 1 to 1 using 1 threads is 1.
+andrew@andrew-VirtualBox: ~/OS$ exit
+exit
+
+Script done on Thu 27 Sep 2018 05:13:37 PM EDT

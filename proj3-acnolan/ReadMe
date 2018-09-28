@@ -1,0 +1,60 @@
+==========================================================================
+Homework 3
+==========================================================================
+By: Andrew Nolan - acnolan
+
+--------------------------------------------------------------------------
+Files Included
+--------------------------------------------------------------------------
+addem.cpp - the source code for part 1 of the homework
+life.cpp - the source code for part 2 of the homework
+Makefile - the file used to make the executables of addem and life
+part1script - my example run for part 1
+part2script - my example run for part 2
+ReadMe - the file you are reading right now
+tests - a folder containing text files used for testing life.
+	These tests are from CS2303.
+
+--------------------------------------------------------------------------
+Description
+--------------------------------------------------------------------------
+Project 3 is designed to show an introduction to coding
+with multiple threads. Part 1 of the assignment is a 
+basic message passing system that uses multiple threads
+to do a summation from 1 to a user given number. It does
+this by splitting the numbers that need to be added evenly
+between the threads. The parent thread then adds them back
+together. Part 2 builds upon the message passing system
+made in part 1. Part 2 performs John Conway's Game of Life 
+using multiple threads for increased performance on
+multiprocessors. The checking of rows is split between the
+threads. 
+
+--------------------------------------------------------------------------
+How to run part 1
+--------------------------------------------------------------------------
+Part 1 of the assignment is called addem.
+First run the make file by calling the command
+make in the directory holding the code. Next 
+run './addem threads countTo' where threads is 
+the number of threads you want to be used, and 
+countTo is the number you want the threads to count
+to. 
+
+--------------------------------------------------------------------------
+How to run part 2
+--------------------------------------------------------------------------
+After using the make command. Run
+'./life threads filename generations (print) (input)'
+threads is the number of threads to use. filename is
+the name of the file with the starting generation in
+it. This must be made of 0s and 1s separated by a space.
+Generations is the number of generations to simulate.
+print is an optional parameter of 'y' that prints 
+every generation instead of just the first and last ones.
+input is also optional, enabling input with a 'y' 
+requires you to press enter before it will display the
+next generation. The input option will only work if
+the print option is also enabled.
+
+
