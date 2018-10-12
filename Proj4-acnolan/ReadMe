@@ -1,0 +1,32 @@
+==========================================================================
+Project 4
+==========================================================================
+By: Andrew Nolan - acnolan
+
+--------------------------------------------------------------------------
+Files Included
+--------------------------------------------------------------------------
+Makefile - the file that makes proj4
+proj4.cpp - the source code for project4
+ReadMe - the file you are reading now
+script - a file containing an example execution of proj4
+report.docx - a report showing the performances differences in the different methods of searching
+
+--------------------------------------------------------------------------
+Description
+--------------------------------------------------------------------------
+Project 4 is a program that searches files for specified substrings.
+Running the program is done through the command line with:
+'./proj4 filename searchstring [size|mmap|pn]' where filename is the
+name of the file you want to search, searchstring is the substring 
+you are searching for. The remaining argument is an optional choice
+between size, an integer value for the chunk size you want to search with 
+at in bytes with the read command. mmap is called with 'mmap' and searches
+the file using a memory map. Finally pn searches through the file with
+a memory map using n number of parallel threads. At most there can be
+16 threads and the maximum chunk size is 8 bytes (8192 bytes). The default
+search is using 1 KB chunks.
+
+
+
+

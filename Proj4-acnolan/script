@@ -1,0 +1,26 @@
+Script started on Thu 11 Oct 2018 03:05:43 PM EDT
+andrew@andrew-VirtualBox: ~/OS$ ./proj4 proj4.cpp for
+Using the read system call.
+File size: 7323 bytes.
+Occurrences of the string "for": 18
+andrew@andrew-VirtualBox: ~/OS$ ./proj4 proj4.cpp for 1
+Using the read system call.
+File size: 7323 bytes.
+Occurrences of the string "for": 18
+andrew@andrew-VirtualBox: ~/OS$ ./proj4 proj4.cpp for mmap
+Using memory map.
+File size: 7323 bytes.
+Occurrences of the string "for": 18
+andrew@andrew-VirtualBox: ~/OS$ ./proj4 proj4.cpp for p18
+The Max Thread Limit is 16, setting thread count to 16
+Using memory map with multiple threads
+File size: 7323 bytes.
+Occurrences of the string "for": 18
+andrew@andrew-VirtualBox: ~/OS$ ./proj4 proj4.cpp for p4
+Using memory map with multiple threads
+File size: 7323 bytes.
+Occurrences of the string "for": 18
+andrew@andrew-VirtualBox: ~/OS$ exit
+exit
+
+Script done on Thu 11 Oct 2018 03:06:29 PM EDT
